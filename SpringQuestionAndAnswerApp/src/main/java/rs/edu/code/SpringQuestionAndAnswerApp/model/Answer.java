@@ -10,10 +10,10 @@ public class Answer {
     @GeneratedValue
     private long id;
     @Column(columnDefinition = "TEXT", nullable = false)
-    private String question_text;
+    private String questionText;
 
     @Column(columnDefinition = "TEXT", nullable = false)
-    private String answer_text;
+    private String answerText;
 
     @ManyToOne
     @JoinColumn(name = "question_id", foreignKey = @ForeignKey(name = "fk_question_id"))
@@ -23,9 +23,9 @@ public class Answer {
 
     }
 
-    public Answer(String question_text, String answer_text) {
-        this.question_text = question_text;
-        this.answer_text = answer_text;
+    public Answer(String questionText, String answerText) {
+        this.questionText = questionText;
+        this.answerText = answerText;
     }
 
     public long getId() {
@@ -36,20 +36,20 @@ public class Answer {
         this.id = id;
     }
 
-    public String getQuestion_text() {
-        return question_text;
+    public String getQuestionText() {
+        return questionText;
     }
 
-    public void setQuestion_text(String question_text) {
-        this.question_text = question_text;
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
     }
 
-    public String getAnswer_text() {
-        return answer_text;
+    public String getAnswerText() {
+        return answerText;
     }
 
-    public void setAnswer_text(String answer_text) {
-        this.answer_text = answer_text;
+    public void setAnswerText(String answerText) {
+        this.answerText = answerText;
     }
 
     public Question getQuestion() {
