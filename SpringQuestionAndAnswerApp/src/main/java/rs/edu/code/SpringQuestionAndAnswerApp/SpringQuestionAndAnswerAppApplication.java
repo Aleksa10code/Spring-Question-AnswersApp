@@ -20,7 +20,13 @@ public class SpringQuestionAndAnswerAppApplication implements ApplicationRunner 
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		System.out.println("Pokrecemo spring aplikaciju!");
+		System.out.println("Start Spring application!");
+		System.out.println("Add answer");
+
+
+
+
+
 
 
 

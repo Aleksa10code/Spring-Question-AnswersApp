@@ -12,16 +12,8 @@ public class Question {
     @GeneratedValue
     private long id;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
-    private String text;
-
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Answer> answers = new LinkedHashSet<>();
-
-    public void addAnswer(Answer answer) {
-    answer.setQuestion(this);
-    answers.add(answer);
-    }
 
 
     public long getId() {
@@ -30,14 +22,6 @@ public class Question {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 
     public Set<Answer> getAnswers() {
